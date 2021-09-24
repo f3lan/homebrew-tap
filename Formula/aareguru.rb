@@ -13,6 +13,10 @@ class Aareguru < Formula
       url "https://github.com/gexclaude/aaregurucli/releases/download/v0.5.0/aareguru_0.5.0_darwin_amd64.tar.gz"
       sha256 "ee67f405236a1b9227cd941799803aa4276e19307b307facd88eaf7ac9a8fa31"
     end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/gexclaude/aaregurucli/releases/download/v0.5.0/aareguru_0.5.0_linux_arm64.tar.gz"
+      sha256 "d3cb4cab981baf88d660b2a0ab68525ae53509da5802eca4ac6bca5074732e6a"
+    end
   end
 
   on_linux do
